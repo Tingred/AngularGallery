@@ -1,0 +1,30 @@
+<div *ngIf="currentUser; else unlogged">
+<div class="container" >
+    <header class="jumbotron">
+      <h3>
+        <strong>{{ currentUser.username }}</strong> Profile
+      </h3>
+    </header>
+    <p>
+        <strong>
+            Email:
+        </strong>
+        {{ currentUser.email }}
+      </p>
+      <p>
+        <strong>
+        Role:
+      </strong>
+      {{ currentUser.role }}
+    </p>
+    
+  </div>
+  
+<app-upload-photo>
+</app-upload-photo>
+</div>
+<ng-template #unlogged>
+  <app-unlogged>
+  </app-unlogged>
+</ng-template>
+
